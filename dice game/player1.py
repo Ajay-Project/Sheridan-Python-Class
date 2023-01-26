@@ -11,3 +11,4 @@ class Player1:
             print("Winner")
         else:
             print("You Lose")
+            print("HAHAHAHHA")
