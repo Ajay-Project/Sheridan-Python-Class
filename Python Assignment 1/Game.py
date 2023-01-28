@@ -36,4 +36,8 @@ while True:
     else:
         print("Invalid Input You have moved towards the (East, West, North, South")
 
+    #BATTLE
+
+    if fight_guards:
+    
 
