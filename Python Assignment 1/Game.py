@@ -7,37 +7,32 @@ def start_game():
     print("YOUR GOAL IS TO FIND THE ONE PIECE")
 
 #Choose your role
-while True:
-    print("Choose your role: (Priate/Warrior)")
-    role = input().strip().capitalize()
-    if role == "priate":
-        player = Priate()
-        break
-    elif role == "warrior":
-        player = Warrior()
-        break
-    else:
-        print("Invalid role choice.(Priate/Warrior)")
-
+print("Choose your role: (Priate/Warrior)")
+role = input().strip().capitalize()
+    
 while True:
     print("Which direction would you like to go? (East, West, North, South)")
     direction = input().strip().capitalize()
 
-
-    #Movement
-    if direction == "East":
-        print("You have moved towards the East")
-    elif direction == "South":
-         print("You have moved towards the South")
-    elif direction == "West":
-         print("You have moved towards the West")
-    elif direction == "North":
-         print("You have moved towards the North")
-    else:
-        print("Invalid Input You have moved towards the (East, West, North, South")
-
-    #BATTLE
-
-    if fight_guards:
+    #MOVEMENT
     
-
+    if direction == "north":
+        # Move player to new location
+        print("You have moved north.")
+    elif direction == "south":
+        # Move player to new location
+        print("You have moved south.")
+    elif direction == "east":
+        # Move player to new location
+        print("You have moved east.")
+    elif direction == "west":
+        # Move player to new location
+        print("You have moved west.")
+    elif direction == "quit":
+        # End game
+        print("Thanks for playing!")
+        break
+    else:
+        # Invalid input
+        print("Invalid choice. Please try again.")
+    
