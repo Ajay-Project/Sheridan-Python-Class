@@ -2,7 +2,7 @@
 
 def battle():
     #priate ability
-    stamina = 89
-    strength = 75
-    cunning = 92
-    
+    priate_stamina = random.randrange(1,100)
+    priate_strength = random.randrange(1,100)
+    priate_cunning = random.randrange(1,100)
+    priate_iq = random.randrange(1,130)
