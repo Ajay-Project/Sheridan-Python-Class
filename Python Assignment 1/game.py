@@ -12,41 +12,49 @@ def start_game():
     print("2. Warrior")
     role = input()
 
+    puzzle1_completed = False
+    puzzle2_completed = False
+    puzzle3_completed = False
+    puzzle4_completed = False
+
 #Puzzle 1
     print("Puzzle 1: The Game of Truth")
+    if role == "Pirate":
+        puzzle1_completed = role1.puzzle1()
+    else:
+        puzzle1_completed =role2.puzzle1()
 
 
 #Puzzle 2
     print("Puzzle 2: The Game of Intelligence")
-
+    if role == "Pirate":
+        puzzle2_completed = role1.puzzle2()
+    else:
+        puzzle2_completed =role2.puzzle2()
 
 
 #Puzzle 3
     print("Puzzle 3: The Game of Awarness ")
+    if role == "Pirate":
+        puzzle3_completed = role1.puzzle3()
+    else:
+        puzzle3_completed =role2.puzzle3()
+
 
 
 #Puzzle 4
     print("Puzzle 4: THE CHOICE BETWEEN OF DESIRE ")
-
-
-
-
-
+    if role == "Pirate":
+        puzzle4_completed = role1.puzzle4()
+    else:
+        puzzle4_completed =role2.puzzle4()
 
 
 #Game Over Message
-#if statement
-    print("YOU HAVE COMPLETE THE SEARCH FOR ONE PIECE")
-#else:
-    print("Failed you need to do some self-reflection")
-
-
-
-
-
-
-
-
+    if puzzle1_completed and puzzle2_completed and puzzle3_completed and puzzle4_completed:
+        print("YOU HAVE COMPLETE THE SEARCH FOR ONE PIECE")
+    else:
+        print("Failed you need to do some self-reflection")
 
 
 start_game()
