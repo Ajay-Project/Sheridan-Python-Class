@@ -8,9 +8,9 @@ def start_game():
     print("THE AIM TO THE HAVE THE DESIRE TO CONTINUE AFTER FAILURE")
 
     #Role Selection
-    print("1. Pirate")
-    print("2. Warrior")
-    role = input()
+    print("Pirate")
+    print("Warrior")
+    role = input().capitalize()
 
     puzzle1_completed = False
     puzzle2_completed = False

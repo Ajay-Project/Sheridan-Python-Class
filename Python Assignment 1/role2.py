@@ -27,7 +27,7 @@ def puzzle2():
 
 def puzzle3():
     answer = input("How many times did you blink while playing this game? ")
-    if answer == range(100000000000):
+    if answer == range(100):
         print("Intersting that you got that correct")
         return True
     else:
@@ -36,7 +36,7 @@ def puzzle3():
 
 def puzzle4():
     answer= input("What was the aim of this game? ")
-    if answer == input("THE AIM TO THE HAVE THE DESIRE TO CONTINUE AFTER FAILURE").upper():
+    if answer == input("THE AIM TO THE HAVE THE DESIRE TO CONTINUE AFTER FAILURE"):
         print("Desire is the starting point of all achievement, not a hope, not a wish, but a keen pulsating desire which transcends everything. - Napoleon Hill")
         return True
     else:
