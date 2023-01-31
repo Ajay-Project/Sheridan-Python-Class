@@ -49,7 +49,6 @@ def start_game():
     else:
         puzzle4_completed =role2.puzzle4()
 
-
 #Game Over Message
     if puzzle1_completed and puzzle2_completed and puzzle3_completed and puzzle4_completed:
         print("YOU HAVE COMPLETE THE SEARCH FOR ONE PIECE")
