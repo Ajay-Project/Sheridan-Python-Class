@@ -2,10 +2,10 @@
 
 import random
 
-def pirate_ability():
-    strength = random.randint(1, 100)
-    iq = random.randint(1, 130)
-    stamina = random.randint(1, 100)
+
+pirate_strength = random.randint(1, 100)
+pirate_iq = random.randint(1, 130)
+pirate_stamina = random.randint(1, 100)
     
 def puzzle1():
     answer=input("What is your role? ")

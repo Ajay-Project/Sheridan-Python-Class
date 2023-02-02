@@ -2,10 +2,10 @@
 
 import random
 
-def warrior_ability():
-    strength = random.randint(1, 100)
-    iq = random.randint(1, 130)
-    stamina = random.randint(1, 100)
+
+warrior_strength = random.randint(1, 100)
+warrior_iq = random.randint(1, 130)
+warrior_stamina = random.randint(1, 100)
 
 def puzzle1():
     answer=input("What is your role? ")
@@ -36,7 +36,7 @@ def puzzle3():
 
 def puzzle4():
     answer= input("What was the aim of this game? ")
-    if answer =="To find One Piece":
+    if answer == "To find One Piece":
         print("Desire is the starting point of all achievement, not a hope, not a wish, but a keen pulsating desire which transcends everything. - Napoleon Hill")
         return True
     else:
