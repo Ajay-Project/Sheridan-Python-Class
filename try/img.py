@@ -1,7 +1,7 @@
 import image
 
 win = image.ImageWin(480, 640, "Image Processing")
-original_image = image.FileImage('lcastle.gif')
+original_image = image.FileImage('image.gif')
 
 width = original_image.get_width()
 height = original_image.get_height()
@@ -20,6 +20,6 @@ for row in range(height):
 
 my_image.draw(win)
 print(win.get_mouse())
-my_image.save('lcastle-inverted.gif')
+my_image.save('image-inverted.gif')
 print(my_image.to_list())
 win.exit_on_click()
