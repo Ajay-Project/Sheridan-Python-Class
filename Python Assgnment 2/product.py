@@ -1,4 +1,5 @@
 #Implementation of detail 
+import random
 
 class Product():
     def __init__(self, productCode,productName,productSalePrice,prodManuCost,stockLevel,UnitManu):
@@ -11,12 +12,35 @@ class Product():
 
     
     def get_product_info():
-        productCode = input("Enter Product Code: ")
+        productCode = int(input("Enter Product Code: "))
         productName = input("Enter Product Name: ")
-        productSalePrice = input("Enter Product Sale Price: ")
-        prodManuCost = input("Enter Product Manfacturing Cost: ")
-        stockLevel = input("Enter Stock Level: ")
-        UnitManu = input("Enter Estimated Monuthly Manufactured Amount: ")
-        return Product(productCode, productName, productSalePrice, prodManuCost, stockLevel, UnitManu)
+        productSalePrice = float(input("Enter Product Sale Price: "))
+        prodManuCost = float(input("Enter Product Manfacturing Cost: "))
+        stockLevel = int(input("Enter Stock Level: "))
+        UnitManu = int(input("Enter Estimated Monuthly Manufactured Amount: "))
+        return Product(productCode, productName, productSalePrice, prodManuCost, stockLevel, UnitManu)  
 
-Product.get_product_info()
+    def simulate_monthly():
+        unitSold = randon.randint(self.UnitManu - 10 or self.UnitManu + 10)
+        return unitSold
+        
+        
+    def stock_prediction():
+        pass
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
