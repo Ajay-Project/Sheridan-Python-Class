@@ -36,7 +36,8 @@ class Product:
             maunfactured_unit = self.UnitManu + random.randint(0,200)
             unit_sold = random.randint(0, maunfactured_unit)
             stock_remain = maunfactured_unit - unit_sold
-            return (maunfactured_unit,unit_sold,stock_remain)
+            net_profit = (unit_sold * self.productSalePrice) - (maunfactured_unit * self.prodManuCost)
+            return (maunfactured_unit,unit_sold,stock_remain,net_profit)
 
             
 
