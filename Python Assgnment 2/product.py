@@ -19,8 +19,8 @@ class Product:
         stockLevel = int(input("Enter Stock Level: "))
         UnitManu = int(input("Enter Estimated Monthly Manufactured Amount: "))
         
-    def __str__(self):
-        return f"Product Code: {self.productCode}\nProduct Name: {self.productName}\nSale Price: ${self.productSalePrice}\nManufacture Cost: ${self.prodManuCost}\nMonthly Production: {self.UnitManu}\n"
+   #def __str__(self):
+    #   return f"Product Code: {self.productCode}\nProduct Name: {self.productName}\nSale Price: ${self.productSalePrice}\nManufacture Cost: ${self.prodManuCost}\nMonthly Production: {self.UnitManu}\n"
 
 
     def simulate_monthly(self):
