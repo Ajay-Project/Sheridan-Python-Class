@@ -26,3 +26,5 @@ class Fraction(object):
     def inverse(self):
         """ Returns a new fraction representing 1/self """
         return Fraction(self.denom, self.num)
+
+
