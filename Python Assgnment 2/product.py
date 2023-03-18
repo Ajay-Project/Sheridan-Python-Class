@@ -25,21 +25,19 @@ class Product:
         print("Predicted Monthly Stock for Next 12 Months:")
         soldProduct = 0
         totalUnitManu = 0
-        for m in range(12):
+        for m in range(13):
             monthlyStock = self.UnitManu - self.monthlySales[m]
             soldProduct += self.monthlySales[m]
             totalUnitManu += self.UnitManu
-            print((f"Month{m+1}: Monthly Stock {monthlyStock}"))
+            print((f"Month{m-1}: Monthly Stock {monthlyStock}"))
         netProfit = (soldProduct * self.productSalePrice) - (totalUnitManu * self.prodManuCost)
         print("NET PROFIT/LOSE",(netProfit))
 
 
-
   
 b = Product()
-b.display_prediction_stock_statement()
 b.simulate_monthly_sale()
-
+b.display_prediction_stock_statement()
 
 
 
