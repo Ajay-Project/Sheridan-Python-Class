@@ -7,39 +7,38 @@ class Product:
         self.productName = input("Enter Product Name: ")
         self.productSalePrice = float(input("Enter Product Price: "))
         self.prodManuCost = float(input("Enter Product Manfacturing Cost: "))
-        self.stockLevel = int(input("Enter Stock Level: "))
         self.UnitManu = int(input("Enter Estimated Monthly Manufactured Amount: "))
+        self.monthlySales = []
 
-   #def __str__(self):
-    #   return f"Product Code: {self.productCode}\nProduct Name: {self.productName}\nSale Price: ${self.productSalePrice}\nManufacture Cost: ${self.prodManuCost}\nMonthly Production: {self.UnitManu}\n"
-
-
-    def simulate_monthly(self):
-        #SALE OF PRODUCT
-        unitSold = random.randint(self.UnitManu - 10,self.UnitManu + 10)
-        sale_of_product = unitSold
-        remain_Stock = self.UnitManu - sale_of_product
-        return (sale_of_product,remain_Stock)
+    def simulate_monthly_sale(self):
+        for i in range(12):
+            unitSold = random.randint(self.UnitManu - 10, self.UnitManu + 10)
+            self.monthlySales.append(unitSold)
 
 
-    def display_stock_statement(self):
-
-        pass
-    
-    def stock_prediction(self):
-        for i in range(1,13):
-            maunfactured_unit = self.UnitManu + random.randint(0,200)
-            unit_sold = random.randint(0, maunfactured_unit)
-            stock_remain = maunfactured_unit - unit_sold
-            net_profit = (unit_sold * self.productSalePrice) - (maunfactured_unit * self.prodManuCost)
-            return (maunfactured_unit,unit_sold,stock_remain,net_profit)
-
-            
+    def display_prediction_stock_statement(self):
+        print("Product Code: ", self.productName)
+        print("Product Name: ",self.productName)
+        print("Sale Price: ", self.productSalePrice)
+        print("Manufacture Cost: ", self.prodManuCost)
+        print("Monthy Production : ",self.UnitManu, "Apx")
+        print("Predicted Monthly Stock for Next 12 Months:")
+        soldProduct = 0
+        totalUnitManu = 0
+        for m in range(12):
+            monthlyStock = self.UnitManu - self.monthlySales[m]
+            soldProduct += self.monthlySales[m]
+            totalUnitManu += self.UnitManu
+            print((f"Month{m+1}: Monthly Stock {monthlyStock}"))
+        netProfit = (soldProduct * self.productSalePrice) - (totalUnitManu * self.prodManuCost)
+        print("NET PROFIT/LOSE",(netProfit))
 
 
 
-
-
+  
+b = Product()
+b.display_prediction_stock_statement()
+b.simulate_monthly_sale()
 
 
 
